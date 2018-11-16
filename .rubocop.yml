@@ -1,0 +1,15 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+Metrics/LineLength:
+  Max: 90
+  IgnoredPatterns: ['\A\s*#']
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/*'
+    - !ruby/regexp /old_and_unused\.rb$/
