@@ -3,7 +3,7 @@ A.E.G.I.S. is a Combining Robot Strategy Game, see: http://zephyrworkshop.com/ae
 
 A web ui for the api will be written eventually as well.
 
-#TODO: Write a real README ;)
+TODO: Write a real README ;)
 
 
 # Code Style Note:
