@@ -41,6 +41,8 @@ group :development, :test do
   gem "pry-rails"
 
   gem "rspec-rails", "~> 3.8"
+  gem "hypothesis-specs"
+  gem "factory_bot_rails"
 end
 
 group :development do

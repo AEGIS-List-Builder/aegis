@@ -12,6 +12,7 @@ require "action_view/railtie"
 # require "action_cable/engine"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require "hypothesis"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -31,5 +32,15 @@ module Aegis
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.sequel.after_connect = proc do
+      Sequel::Model.plugin :timestamps, update_on_create: true
+    end
+
+    RSpec.configure do |config|
+      config.include FactoryBot::Syntax::Methods
+      config.include(Hypothesis)
+      config.include(Hypothesis::Possibilities)
+    end
   end
 end
