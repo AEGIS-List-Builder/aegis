@@ -29,11 +29,5 @@ module Aegis
     config.sequel.after_connect = proc do
       Sequel::Model.plugin :timestamps, update_on_create: true
     end
-
-    RSpec.configure do |config|
-      config.include FactoryBot::Syntax::Methods
-      config.include(Hypothesis)
-      config.include(Hypothesis::Possibilities)
-    end
   end
 end
