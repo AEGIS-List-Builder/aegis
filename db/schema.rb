@@ -36,6 +36,5 @@ end
                   self << "SET search_path TO \"$user\", public"
                   self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20181116054442_create_factions.rb')"
 self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20181116054443_create_robots.rb')"
-self << "INSERT INTO \"schema_migrations\" (\"filename\") VALUES ('20181116212150_rename_class_columns_in_robots.rb')"
                 end
               end
